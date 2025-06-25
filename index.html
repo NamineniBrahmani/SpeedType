@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SpeedType - Typing Speed Test</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>SpeedType</h1>
+
+    <!-- Difficulty and Start Button -->
+    <div class="controls">
+      <label for="difficulty">Difficulty:</label>
+      <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+
+      <button id="startBtn">Start Test</button>
+    </div>
+
+    <!-- Timer -->
+    <div class="timer">
+      Time Left: <span id="timer">60</span>s
+    </div>
+
+    <!-- Quote Display -->
+    <div id="quoteBox" class="quote"></div>
+
+    <!-- Typing Area -->
+    <textarea id="inputArea" placeholder="Start typing here..." disabled></textarea>
+
+    <!-- Submit Button (initially hidden) -->
+    <button id="submitBtn" style="display: none;">Submit</button>
+
+    <!-- Result Display -->
+    <div class="result">
+      <p>WPM: <span id="wpm">0</span></p>
+      <p>Accuracy: <span id="accuracy">0</span>%</p>
+    </div>
+
+    <!-- Leaderboard Section -->
+    <div class="leaderboard">
+  <h2>🏆 Leaderboard</h2>
+  <table id="leaderboardTable">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>WPM</th>
+        <th>Accuracy (%)</th>
+      </tr>
+    </thead>
+    <tbody id="leaderboardBody"></tbody>
+  </table>
+</div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
